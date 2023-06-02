@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "norseBold";
+    src: url(norseBold/norse-bold-webfont.woff) format("woff"), url(norseBold/norse-bold-webfont.woff2) format("woff2");
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    height: 100%;
+}
+
+.nature {
+    height: 100%;
+    background-image: url(img/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+}
+
+.nature>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 5rem;
+    font-family: "norseBold";
+    color: white;
+    margin-top: 250px;
+}
+
+.nature>p>img {
+    max-width: 25%;
+}
+
+.right-side {
+    background-color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.right-side>*:not(form) {
+    margin-left: 5%;
+    width: 70%;
+}
+
+.form-bg {
+    background-color: white;
+    box-shadow: 0px 2px 5px #DADBDC;
+    padding: 10px 0px 30px 0px;
+}
+
+.inputsForm,
+legend,
+button {
+    margin-left: 5%;
+}
+
+.inputsForm {
+    max-width: 60%; /* TEM AQUI */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.inputsForm>div {
+    width: 75%; /* TEM AQUI */
+    display: flex;
+    flex-direction: column;
+}
+
+.inputsForm>div>label {
+    margin-bottom: 2px;
+    font-size: 0.75rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    color: #1F2937;
+}
+
+.inputsForm>div>input {
+    border: 1px solid #E5E7EB;
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    outline: none; 
+    transition: 0.5s;
+}
+
+.inputsForm input:focus {
+    box-sizing: border-box;
+    border: 1px solid #1D4ED8;
+    box-shadow: 0px 2px 5px #DADBDC;
+}
+
+form>button {
+    margin-top: 30px;
+    background-color: #596D48;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding: 15px 50px 15px 50px;
+    border: 2px solid #596D48;
+}
+form>button:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.login {
+    font-size: 1.05em;
+}
+
+.login>a {
+    color: #596D48;
+    text-decoration: none;
+}
+@media screen and (width<600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputsForm{
+        grid-template-columns: auto;
+        max-width: 100%;
+    }
+    .inputsForm>div>input{
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+    .inputsForm>div{
+        margin-top: 20px;
+        width: 90%;
+    }
+    form>button{
+        padding: 30px 10px 30px 0px;
+        width: 90%;
+    }
+    .login{
+        margin-top: 70px;
+        font-size: 1.5rem;
+    }
+}
